@@ -2,3 +2,5 @@ deploy:
   type: git
   repo: https://github.com/Kaijun/hexo-theme-huxblog
   branch: gh-pages
+
+theme: jekyll-theme-cayman
