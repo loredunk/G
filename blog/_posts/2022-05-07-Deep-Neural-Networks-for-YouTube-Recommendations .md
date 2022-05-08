@@ -1,25 +1,23 @@
 ---
 layout: post
 title: Deep Neural Networks for YouTube Recommendations
-
+truncated_preview: true
+excerpt_separator: <!--more-->
 ---
 
-<div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-</div>
 
-<div class=“message”>
- this is my first time to write blog.
+
+<div class="message">
+    this is my first time to write <em>blog</em>.
 </div>    
 
-<div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-</div>
 
 
-## Inline HTML elements
+## 解决了几个问题
 
-HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+yaml一定要注意：后面会有一个空格，还有如果要写html格式的，class="" "”“ 中文和英文在markdown上的双引号十分相似。[Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+
+<!--more-->
 
 - 测试一下**黑体**
 - 测试一下*斜体*
