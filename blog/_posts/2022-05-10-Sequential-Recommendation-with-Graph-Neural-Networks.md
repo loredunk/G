@@ -34,7 +34,7 @@ cluster-aware和query-aware是什么？加一个aware代表什么？
 
 我们将SURGE模型分成了四个部分。
 
-![image-20220511164837857](https://github.com/loredunk/loredunk.github.io/blob/main/blog/_posts/img/image-20220511164837857.png)
+![image-20220511164837857](img/image-20220511164837857.png)
 
 #### 第一部分interest graph construction
 
