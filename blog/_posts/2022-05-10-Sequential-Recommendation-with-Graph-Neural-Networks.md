@@ -36,6 +36,8 @@ cluster-aware和query-aware是什么？加一个aware代表什么？
 
 ![image-20220511164837857](img/image-20220511164837857.png)
 
+![github图片](https://github.com/loredunk/loredunk.github.io/blob/main/blog/_posts/img/image-20220511164837857.png?raw=true)
+
 #### 第一部分interest graph construction
 
 将稀疏的item序列构建成item-item 基于metric learning的interest graphs。
