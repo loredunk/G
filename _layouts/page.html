@@ -9,7 +9,11 @@ layout: default
   MathJax = {
     tex: {
       inlineMath: [['$', '$']],
-      processEscapes: true
+      processEscapes: true,
+      displayMath: [             // start/end delimiter pairs for display math
+    ['$$', '$$'],
+    ['\\[', '\\]']
+  ],
     }
   };
 </script>
