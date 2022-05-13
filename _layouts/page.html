@@ -8,12 +8,10 @@ layout: default
 <script> 
   MathJax = {
     tex: {
-      inlineMath: [['$', '$']],
-      processEscapes: true,
-      displayMath: [             // start/end delimiter pairs for display math
-    ['$$', '$$'],
-    ['\\[', '\\]']
-  ],
+      inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
     }
   };
 </script>
