@@ -34,9 +34,11 @@ cluster-aware和query-aware是什么？加一个aware代表什么？
 
 我们将SURGE模型分成了四个部分。
 
-![github图片](https://github.com/loredunk/loredunk.github.io/blob/main/blog/_posts/img/image-20220511164837857.png?raw=true)
+![](https://s2.loli.net/2022/05/15/iANj5kl7ueJD26q.png)
 
 #### 第一部分interest graph construction
+
+
 
 将稀疏的item序列构建成item-item 基于metric learning的interest graphs。
 
@@ -211,7 +213,7 @@ GAUC 执行了每个用户AUC的权重平均。权重是点击数
 
 MRR 正确答案的排名的倒数的平均，
 
-![image-20220512162921501](C:\Users\cg\AppData\Roaming\Typora\typora-user-images\image-20220512162921501.png)
+![](https://s2.loli.net/2022/05/15/xVGnUTtLkbOlMX8.png)
 
 NDCG@K 分数高得排在前面，指标就越高。 这里跟其他的现存的工作一样，K取个2。
 
