@@ -38,11 +38,9 @@ excerpt_separator: <!--more-->
 先是将l层的u节点的邻居v的embedding融合成一个l+1层的一个固定长度的vector n，然后再将n与l层的u进行一个update的操作。
 
 
-
+$$
 \begin{aligned}
 &\mathbf{n}_{u}^{(l+1)}=f_{u \leftarrow v}\left(\mathbf{h}_{v}^{(l)} \mid v \in \mathcal{N}_{u}\right) \\
 &\mathbf{h}_{u}^{(l+1)}=g\left(\mathbf{n}_{u}^{(l+1)}, \mathbf{h}_{u}^{(l)}\right)
 \end{aligned}
-
-
-
+$$
