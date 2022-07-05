@@ -33,9 +33,7 @@ excerpt_separator: <!--more-->
 
 也是分两步，先聚合邻居点，然后把邻居点和自己的embedding输入一个update函数，进行更新。
 
-2.4 prediction layer
 
-先是将l层的u节点的邻居v的embedding融合成一个l+1层的一个固定长度的vector n，然后再将n与l层的u进行一个update的操作。
 
 
 $$
@@ -44,3 +42,18 @@ $$
 &\mathbf{h}_{u}^{(l+1)}=g\left(\mathbf{n}_{u}^{(l+1)}, \mathbf{h}_{u}^{(l)}\right)
 \end{aligned}
 $$
+
+
+2.4 prediction layer
+
+先是将l层的u节点的邻居v的embedding融合成一个l+1层的一个固定长度的vector n，然后再将n与l层的u进行一个update的操作。
+$$
+\begin{aligned}
+&\mathbf{e}_{u}^{*}=o\left(\mathbf{h}_{u}^{(1)}, \cdots, \mathbf{h}_{u}^{(L)}\right) \\
+&\mathbf{e}_{v}^{*}=o\left(\mathbf{h}_{v}^{(1)}, \cdots, \mathbf{h}_{v}^{(L)}\right)
+\end{aligned}
+$$
+
+## STAM的架构
+
+![image-20220705164606583](C:\nutscloud\我的坚果云\我的坚果云\github\loredunk.github.io\blog\_posts\images\image-20220705164606583.png)
