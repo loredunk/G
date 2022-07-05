@@ -1,10 +1,8 @@
 ---
 layout: post
-title: STAM: A Spatiotemporal Aggregation Method for Graph Neural
-Network-based Recommendation
+title: STAM: A Spatiotemporal Aggregation Method for Graph Neural Network-based Recommendation
 truncated_preview: true
 excerpt_separator: <!--more--> 
-
 ---
 
 <div class="message">
