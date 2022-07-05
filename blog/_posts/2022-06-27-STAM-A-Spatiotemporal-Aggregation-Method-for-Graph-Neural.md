@@ -56,4 +56,4 @@ $$
 
 ## STAM的架构
 
-![image-20220705164606583](C:\nutscloud\我的坚果云\我的坚果云\github\loredunk.github.io\blog\_posts\images\image-20220705164606583.png)
+![image-20220705183148173](images/image-20220705183148173.png)
