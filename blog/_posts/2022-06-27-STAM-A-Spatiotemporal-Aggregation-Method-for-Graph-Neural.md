@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 </div>    
 
 图神经网络推荐系统的关键核心就是制造邻居的embedding learning，之前的工作都聚焦于空间上的聚合，但是时空上的研究还是比较少，STAM采用Scaled-Dot-Product Attention去one-hop的时空顺序，采用多头注意力机制去进行joint attention在不同的隐藏子空间，本文的实验表明，时空聚合方法在MRR@20指标上MovieLens上超越24%，Amazon上超越8%，淘宝上超过13%。
-
+Mac～～
 <!--more-->
 
 疑问： 图序列推荐不是也包含了时间信息么，两者有什么区别呢？
