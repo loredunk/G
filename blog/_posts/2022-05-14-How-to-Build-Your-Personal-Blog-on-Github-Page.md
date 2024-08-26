@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Build Your Personal Blog on Github page
+title: How to Build Your Personal Blog on Github Page
 truncated_preview: true
 excerpt_separator: <!--more--> 
 ---
@@ -11,3 +11,4 @@ excerpt_separator: <!--more-->
 </div>    
 
 <!--more-->
+

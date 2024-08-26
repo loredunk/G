@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 
 
 <div class="message">
-    this is my first time to write <em>blog</em>.
+   	不得不说，大部分中国人写的英文论文和navtive speaker写的英文论文区别还是大的。。
 </div>    
 
 

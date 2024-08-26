@@ -43,10 +43,11 @@ $$
 \end{aligned}
 $$
 
-
 2.4 prediction layer
 
 先是将l层的u节点的邻居v的embedding融合成一个l+1层的一个固定长度的vector n，然后再将n与l层的u进行一个update的操作。
+
+
 $$
 \begin{aligned}
 &\mathbf{e}_{u}^{*}=o\left(\mathbf{h}_{u}^{(1)}, \cdots, \mathbf{h}_{u}^{(L)}\right) \\

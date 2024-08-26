@@ -46,6 +46,8 @@ Footnotes are supported as part of the Markdown syntax. Here's one in action. Cl
 Clicking this number[^fn-sample_footnote]
 {% endhighlight %}
 
+
+
 Each footnote needs the `^fn-` prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:
 
 {% highlight text %}
