@@ -5,7 +5,7 @@ title: Home
 <div class="page">
   
   <header>
-    <h1 class="landing-title">Hello, world!</h1>
+    <h1 class="landing-title">Hello, It's Gavin!</h1>
   </header>
   
   <div class="text-center">
@@ -13,11 +13,6 @@ title: Home
       <i class="fa fa-code-fork fa-3x"></i>
     </p>
 
-    <p>
-      欢迎来到Gavin的博客。 <br>
-      <!-- <a href="https://github.com/nicoelayda/celeste">Celeste</a> in Jekyll! -->
-      Welcome to Gavin's blog.
-    </p>
 
     <p>
       这里记录学习心得，分享一些感悟.
@@ -27,5 +22,61 @@ title: Home
       如果没有恐惧，你会怎么做？  - Sheryl Sandberg
     </p>
   </div>
-  
+</div>
+
+<!-- 博客部分 -->
+<h2>最新博客文章</h2>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+
+    {% if post.truncated_preview == true or site.blog.truncated_preview and post.truncated_preview != false %}
+      {{ post.excerpt }}
+      <a href="{{ site.baseurl }}{{ post.url }}">阅读更多</a>
+    {% else %}
+      {{ post.content }}
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item" href="{{ site.baseurl }}/blog/{{ paginator.next_page }}">
+      <i class="fa fa-arrow-circle-o-left"></i> 
+      <span class="pagination-text">较早的文章</span>
+    </a>
+  {% else %}
+    <span class="pagination-item">
+      <i class="fa fa-arrow-circle-o-left"></i> 
+      <span class="pagination-text">较早的文章</span>
+    </span>
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item" href="{{ site.baseurl }}/">
+        <span class="pagination-text">较新的文章</span> 
+        <i class="fa fa-arrow-circle-o-right"></i>
+      </a>
+    {% else %}
+      <a class="pagination-item" href="{{ site.baseurl }}/blog/{{ paginator.previous_page }}">
+        <span class="pagination-text">较新的文章</span> 
+        <i class="fa fa-arrow-circle-o-right"></i>
+      </a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item">
+      <span class="pagination-text">较新的文章</span> 
+      <i class="fa fa-arrow-circle-o-right"></i>
+    </span>
+  {% endif %}
 </div>
