@@ -10,7 +10,7 @@ title: Home
   
   <div class="text-center">
     <p>
-      <i class="fa fa-code-fork fa-3x"></i>
+      <span style="font-size: 3em; font-weight: bold;">G</span>
     </p>
 
 
@@ -24,59 +24,26 @@ title: Home
   </div>
 </div>
 
-<!-- 博客部分 -->
-<h2>最新博客文章</h2>
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
+<!-- 最新文章 -->
+{% assign latest_post = site.posts.first %}
+{% if latest_post %}
+  <article class="post-preview">
+    <h2 class="post-title">
+      <a href="{{ site.baseurl }}{{ latest_post.url }}">
+        {{ latest_post.title }}
       </a>
-    </h1>
+    </h2>
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+    <p class="post-meta">{{ latest_post.date | date: "%d %b %Y" }}</p>
 
-    {% if post.truncated_preview == true or site.blog.truncated_preview and post.truncated_preview != false %}
-      {{ post.excerpt }}
-      <a href="{{ site.baseurl }}{{ post.url }}">阅读更多</a>
-    {% else %}
-      {{ post.content }}
-    {% endif %}
+    <div class="post-excerpt">
+      {{ latest_post.excerpt | strip_html | truncatewords: 50 }}
+    </div>
+
+    <a href="{{ site.baseurl }}{{ latest_post.url }}" class="read-more">Read more</a>
   </article>
-  {% endfor %}
-</div>
+{% else %}
+  <p>暂无文章</p>
+{% endif %}
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item" href="{{ site.baseurl }}/blog/{{ paginator.next_page }}">
-      <i class="fa fa-arrow-circle-o-left"></i> 
-      <span class="pagination-text">较早的文章</span>
-    </a>
-  {% else %}
-    <span class="pagination-item">
-      <i class="fa fa-arrow-circle-o-left"></i> 
-      <span class="pagination-text">较早的文章</span>
-    </span>
-  {% endif %}
 
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item" href="{{ site.baseurl }}/">
-        <span class="pagination-text">较新的文章</span> 
-        <i class="fa fa-arrow-circle-o-right"></i>
-      </a>
-    {% else %}
-      <a class="pagination-item" href="{{ site.baseurl }}/blog/{{ paginator.previous_page }}">
-        <span class="pagination-text">较新的文章</span> 
-        <i class="fa fa-arrow-circle-o-right"></i>
-      </a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item">
-      <span class="pagination-text">较新的文章</span> 
-      <i class="fa fa-arrow-circle-o-right"></i>
-    </span>
-  {% endif %}
-</div>
